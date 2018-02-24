@@ -1,0 +1,29 @@
+<h1>This is a {{requestType}} Request</h1>
+
+{{#if getDataList}}
+	<ul>
+		{{#each getDataList}}
+			<li><strong>{{this.key}}</strong>: {{this.value}}</li>
+		{{/each}}
+	</ul>
+{{/if}}
+
+{{#if qDataList}}
+	<h4>Query String Data</h4>
+
+	<ul>
+		{{#each qDataList}}
+			<li><strong>{{this.key}}</strong>: {{this.value}}</li>
+		{{/each}}
+	</ul>
+{{/if}}
+
+{{#if postDataList}}
+	<h4>Body Data</h4>
+
+	<ul>
+		{{#each postDataList}}
+			<li><strong>{{this.key}}</strong>: {{this.value}}</li>
+		{{/each}}
+	</ul>
+{{/if}}
